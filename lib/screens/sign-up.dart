@@ -73,13 +73,34 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     Icons.email_outlined,
                     color: const Color(0xFF171717),
                   ),
+                  //custom background
+                  filled:true,
+                  fillColor: Color(0xFFF5F5F5),
+
+                  //rounded borders
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(12),
+                    borderSide: BorderSide.none, // removes default underline
+                  ),
+
+                  //when focused
+                  focusedBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(12),
+                    borderSide: const BorderSide(
+                      color: Color(0xFF4B5320),
+                      width: 2,
+                    ),
+                  ),
+
+
+
                   labelStyle: const TextStyle(
                     fontSize: 14,
                     fontWeight: FontWeight.w500,
                     fontFamily: 'DM Sans',
                     color: Color(0xFF7C7C7C),
                   ),
-                  border: const UnderlineInputBorder(),
+                  
                   contentPadding: const EdgeInsets.symmetric(
                     horizontal: 16,
                     vertical: 12,
@@ -96,7 +117,25 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     Icons.person_outline,
                     color: const Color(0xFF171717),
                   ),
-                  border: const UnderlineInputBorder(),
+                 //custom background
+                  filled:true,
+                  fillColor: Color(0xFFF5F5F5),
+
+                  //rounded borders
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(12),
+                    borderSide: BorderSide.none, // removes default underline
+                  ),
+
+                  //when focused
+                  focusedBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(12),
+                    borderSide: const BorderSide(
+                      color: Color(0xFF4B5320),
+                      width: 2,
+                    ),
+                  ),
+
                 ),
               ),
               const SizedBox(height: 24),
@@ -123,11 +162,29 @@ class _SignUpScreenState extends State<SignUpScreen> {
                       });
                     },
                   ),
-                  border: const UnderlineInputBorder(),
+                  //custom background
+                  filled:true,
+                  fillColor: Color(0xFFF5F5F5),
+
+                  //rounded borders
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(12),
+                    borderSide: BorderSide.none, // removes default underline
+                  ),
+
+                  //when focused
+                  focusedBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(12),
+                    borderSide: const BorderSide(
+                      color: Color(0xFF4B5320),
+                      width: 2,
+                    ),
+                  ),
+
                 ),
               ),
               const SizedBox(height: 32),
-                            Row(
+              Row(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Checkbox(
@@ -175,6 +232,56 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     ),
                   ),
                 ],
+              ),
+              const Spacer(),
+              // Sign Up button
+
+              SizedBox(
+                width: double.infinity,
+                child: ElevatedButton.icon(
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: const Color(0xFF4B5320),
+                    padding: const EdgeInsets.symmetric(vertical: 16),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20),
+                    ),
+                  ), 
+                  onPressed: () {
+                    Navigator.pushReplacementNamed(context, '/');
+                  },
+                  icon: const Icon(Icons.arrow_forward, color: Colors.white), 
+                  label: const Text(
+                    'SIGN UP',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
+                      letterSpacing: 1,
+                      fontFamily: 'DM Sans',
+                    )
+                  )
+                )
+              ),
+              
+              const SizedBox(height: 16),
+              // Sign up link
+              Center(
+                
+                child: RichText(
+                  text:  TextSpan(
+                     style: const TextStyle(color: Colors.grey),
+                    children: [
+                      const TextSpan(text: "Already have an account? "),
+                      TextSpan(
+                        text: "Sign in",
+                        style: const TextStyle(
+                          fontWeight: FontWeight.bold,
+                          color: Colors.black,
+                        ),
+                        recognizer: _tapGestureRecognizer,
+                      ),
+                    ],
+                  ),
+                ),
               ),
             ],
           ),

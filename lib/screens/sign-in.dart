@@ -67,7 +67,25 @@ class _SignInScreenState extends State<SignInScreen> {
                 decoration: InputDecoration(
                   labelText: "Username or Email",
                   prefixIcon: const Icon(Icons.person_outline),
-                  border: const UnderlineInputBorder(),
+                  //custom background
+                  filled:true,
+                  fillColor: Color(0xFFF5F5F5),
+
+                  //rounded borders
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(12),
+                    borderSide: BorderSide.none, // removes default underline
+                  ),
+
+                  //when focused
+                  focusedBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(12),
+                    borderSide: const BorderSide(
+                      color: Color(0xFF4B5320),
+                      width: 2,
+                    ),
+                  ),
+
                 ),
               ),
               const SizedBox(height: 24),
@@ -90,7 +108,25 @@ class _SignInScreenState extends State<SignInScreen> {
                       });
                     },
                   ),
-                  border: const UnderlineInputBorder(),
+                  //custom background
+                  filled:true,
+                  fillColor: Color(0xFFF5F5F5),
+
+                  //rounded borders
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(12),
+                    borderSide: BorderSide.none, // removes default underline
+                  ),
+
+                  //when focused
+                  focusedBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(12),
+                    borderSide: const BorderSide(
+                      color: Color(0xFF4B5320),
+                      width: 2,
+                    ),
+                  ),
+
                 ),
               ),
               const Spacer(),
@@ -144,25 +180,25 @@ class _SignInScreenState extends State<SignInScreen> {
               ),
              const SizedBox(height:8),
 
-              // Facebook button
-              SizedBox(
-                width: double.infinity,
-                child: ElevatedButton.icon(
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: const Color(0xFF3C79E6),
-                    padding: const EdgeInsets.symmetric(vertical: 16),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(20),
-                    ),
-                  ),
-                  onPressed: () {},
-                  icon: const Icon(Icons.facebook, color: Colors.white),
-                  label: const Text(
-                    "Connect with Facebook",
-                    style: TextStyle(color: Colors.white),
-                  ),
-                ),
-              ),
+              // // Facebook button
+              // SizedBox(
+              //   width: double.infinity,
+              //   child: ElevatedButton.icon(
+              //     style: ElevatedButton.styleFrom(
+              //       backgroundColor: const Color(0xFF3C79E6),
+              //       padding: const EdgeInsets.symmetric(vertical: 16),
+              //       shape: RoundedRectangleBorder(
+              //         borderRadius: BorderRadius.circular(20),
+              //       ),
+              //     ),
+              //     onPressed: () {},
+              //     icon: const Icon(Icons.facebook, color: Colors.white),
+              //     label: const Text(
+              //       "Connect with Facebook",
+              //       style: TextStyle(color: Colors.white),
+              //     ),
+              //   ),
+              // ),
             ],
           ),
         ),
