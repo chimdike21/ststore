@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'screens/st_onboarding.dart'; 
+import 'screens/st_onboarding.dart';
 import 'screens/sign-in.dart';
+import 'screens/sign-up.dart';
 
 void main() {
   runApp(const MyApp());
@@ -22,7 +23,8 @@ class MyApp extends StatelessWidget {
       routes: {
         '/': (context) => const OnboardingScreen(),
         '/sign-in': (context) => const SignInScreen(),
-      } //
+        '/sign-up': (context) => const SignUpScreen(),
+      }, //
     );
   }
 }

@@ -51,8 +51,8 @@ class _SignInScreenState extends State<SignInScreen> {
               const Text(
                 "Let’s Sign You In",
                 style: TextStyle(
-                  fontSize: 26,
-                  fontWeight: FontWeight.bold,
+                  fontSize: 24,
+                  fontWeight: FontWeight.w700,
                 ),
               ),
               const SizedBox(height: 8),
@@ -106,7 +106,9 @@ class _SignInScreenState extends State<SignInScreen> {
                       borderRadius: BorderRadius.circular(20),
                     ),
                   ),
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushReplacementNamed(context, '/sign-up');
+                  },
                   icon: const Icon(Icons.arrow_forward, color: Colors.white),
                   label: const Text(
                     "SIGN IN",
