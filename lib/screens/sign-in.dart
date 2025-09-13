@@ -143,7 +143,7 @@ class _SignInScreenState extends State<SignInScreen> {
                     ),
                   ),
                   onPressed: () {
-                    Navigator.pushReplacementNamed(context, '/sign-up');
+                    Navigator.pushReplacementNamed(context, '/home');
                   },
                   icon: const Icon(Icons.arrow_forward, color: Colors.white),
                   label: const Text(

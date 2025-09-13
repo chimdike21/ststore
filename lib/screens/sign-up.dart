@@ -247,7 +247,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     ),
                   ), 
                   onPressed: () {
-                    Navigator.pushReplacementNamed(context, '/');
+                    Navigator.pushReplacementNamed(context, '/home');
                   },
                   icon: const Icon(Icons.arrow_forward, color: Colors.white), 
                   label: const Text(
